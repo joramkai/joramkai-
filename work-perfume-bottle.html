@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Perfume Bottle — Joram Kai</title>
+<meta name="description" content="Faceted fragrance bottle with a chamfered cap.">
+<meta property="og:title" content="Perfume Bottle — Joram Kai">
+<meta property="og:description" content="Faceted fragrance bottle with a chamfered cap.">
+<meta property="og:image" content="img/covers/tv-band.jpg">
+<meta name="theme-color" content="#0000FF">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%230000FF'/%3E%3Ctext x='32' y='44' font-family='Arial Black,Arial' font-weight='900' font-size='30' text-anchor='middle' fill='white'%3EJK%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;800&amp;family=IBM+Plex+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+.pg{font-family:'IBM Plex Mono',ui-monospace,monospace;min-height:100vh;-webkit-font-smoothing:antialiased}
+.pg *{box-sizing:border-box}
+.side{position:fixed;top:0;left:0;bottom:0;width:220px;padding:44px 32px;display:flex;flex-direction:column;gap:56px;z-index:5}
+.brand{display:flex;flex-direction:column;gap:14px;text-decoration:none;color:inherit}
+.brand-name{font-family:'Big Shoulders Display',sans-serif;font-weight:800;font-size:34px;line-height:.9;letter-spacing:.01em;text-transform:uppercase}
+.nav{display:flex;flex-direction:column;gap:2px}
+.nav a{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:inherit;opacity:.62;text-decoration:none;padding:6px 0;min-height:32px;display:flex;align-items:center}
+.nav a:hover,.nav a.on{opacity:1}
+.nav a.on{font-weight:500}
+.nav a:focus-visible,.chip:focus-visible,.next:focus-visible{outline:2px solid currentColor;outline-offset:3px}
+.main{max-width:1280px;margin:0 auto;padding:0 32px}
+.back{position:fixed;top:24px;left:24px;z-index:6;display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:0 18px;border:1px solid currentColor;border-radius:999px;color:inherit;text-decoration:none;font-size:12px;letter-spacing:.14em;text-transform:uppercase;animation:bob 3.2s ease-in-out infinite;will-change:transform}
+.back:hover{animation-play-state:paused}
+.back:focus-visible{outline:2px solid currentColor;outline-offset:3px}
+@keyframes bob{0%,100%{transform:translate3d(0,0,0)}50%{transform:translate3d(0,-7px,0)}}
+
+.head{padding:72px 0 48px;text-align:center;display:flex;flex-direction:column;align-items:center;gap:14px}
+.title{margin:0;font-family:'Big Shoulders Display',sans-serif;font-weight:800;font-size:clamp(48px,6.2vw,104px);line-height:.92;text-transform:uppercase}
+.meta{font-size:12px;letter-spacing:.14em;text-transform:uppercase;opacity:.72}
+.sum{margin:6px 0 0;max-width:520px;font-size:14px;line-height:1.7;opacity:.85}
+.wire{position:relative;height:680px;margin:0 0 16px}
+.cv{position:absolute;inset:0;width:100%;height:100%;display:block;touch-action:pan-y;cursor:grab}
+.cv:active{cursor:grabbing}
+.ctl{position:absolute;right:16px;bottom:16px;display:flex;gap:6px}
+.chip{min-width:40px;min-height:40px;padding:0 12px;border:1px solid currentColor;background:transparent;color:inherit;font-family:inherit;font-size:13px;cursor:pointer;opacity:.75}
+.chip:hover{opacity:1}
+.hint{position:absolute;left:16px;bottom:22px;font-size:11px;letter-spacing:.14em;text-transform:uppercase;opacity:.6;pointer-events:none}
+.load{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:11px;letter-spacing:.14em;text-transform:uppercase;opacity:.6;pointer-events:none}
+.vids{display:flex;justify-content:center;gap:16px;margin:0 0 16px;flex-wrap:wrap}
+.vids video{display:block;height:min(86vh,920px);width:auto;max-width:100%;object-fit:contain;background:transparent}
+.vids.two video{height:min(78vh,820px);max-width:calc(50% - 8px)}
+.imgs{display:flex;flex-direction:column;gap:16px}
+.imgs img{width:100%;height:auto;display:block}
+.det{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin-top:16px}
+.det img{width:100%;height:auto;display:block}
+.next{display:flex;flex-direction:column;align-items:center;gap:10px;padding:96px 0 40px;text-decoration:none;color:inherit}
+.next-t{font-family:'Big Shoulders Display',sans-serif;font-weight:800;font-size:clamp(40px,5vw,80px);line-height:.92;text-transform:uppercase}
+.next:hover .next-t{text-decoration:underline;text-underline-offset:8px;text-decoration-thickness:2px}
+.foot{text-align:center;padding:24px 0 48px;font-size:11px;letter-spacing:.14em;text-transform:uppercase;opacity:.6}
+@media (max-width:760px){
+ .side{position:sticky;bottom:auto;width:auto;flex-direction:row;align-items:center;justify-content:space-between;padding:14px 16px;gap:16px}
+ .brand{flex-direction:row;align-items:center;gap:10px}
+ .brand img{height:32px !important}
+ .brand-name{font-size:24px}
+ .nav{flex-direction:row;gap:14px}
+ .main{padding:0 16px}
+ .back{top:14px;left:14px}
+ .head{padding:84px 0 28px}
+ .wire{height:420px}
+ .det{grid-template-columns:minmax(0,1fr)}
+ .vids video{height:auto;width:100%}
+ .vids.two{flex-wrap:nowrap;gap:8px}
+ .vids.two video{width:calc(50% - 4px)}
+}
+</style>
+</head>
+<body>
+<div class="pg" style="background: #FFFFFF; color: #111414;">
+  <a class="back" href="index.html#work" aria-label="Back to work" style="background: #FFFFFF;">← Work</a>
+  <main class="main">
+    <header class="head">
+      <h1 class="title">Perfume Bottle</h1>
+      <span class="meta">Packaging design · Fragrance bottle</span>
+      <p class="sum">Faceted fragrance bottle with a chamfered cap.</p>
+    </header>
+    <section class="wire" aria-label="Wireframe model">
+      <canvas class="cv" id="cv" role="img" aria-label="Wireframe 3D model of Perfume Bottle. Drag to rotate."></canvas>
+      <div class="load" id="load">Loading model</div>
+      <span class="hint">Drag · Click + scroll to zoom</span>
+      <div class="ctl">
+        <button class="chip" type="button" id="zin" aria-label="Zoom in">+</button>
+        <button class="chip" type="button" id="zout" aria-label="Zoom out">−</button>
+        <button class="chip" type="button" id="zre" aria-label="Reset view">↺</button>
+      </div>
+    </section>
+
+    <section class="imgs" aria-label="Renders">
+        <img src="img/perfume-bottle/render-01.jpg" alt="Perfume Bottle — Front" loading="lazy" decoding="async">
+        <img src="img/perfume-bottle/render-02.jpg" alt="Perfume Bottle — On plinth" loading="lazy" decoding="async">
+        <img src="img/perfume-bottle/render-03.jpg" alt="Perfume Bottle — Three-quarter view" loading="lazy" decoding="async">
+    </section>
+
+    <a class="next" href="work-gps-speaker.html">
+      <span class="meta">Next</span>
+      <span class="next-t">GPS Speaker →</span>
+    </a>
+    <div class="foot">© 2026 Joram Kai</div>
+  </main>
+</div>
+<script src="js/three.min.js"></script>
+<script src="js/GLTFLoader.js"></script>
+<script src="js/RoomEnvironment.js"></script>
+<script src="js/jk-viewer.js"></script>
+<script src="models/perfume-bottle.glb.js"></script>
+<script>
+(function(){
+  var cv=document.getElementById('cv'),ld=document.getElementById('load');
+  if(!window.JK3D){ld.textContent='3D preview unavailable';return;}
+  var o={"surface": "neutral", "palette": ["#C9D2D2", "#1F2425", "#A9B0B0"], "yaw": -0.6, "pitch": 0.22, "src": "models/perfume-bottle.glb", "mode": "wire", "own": true, "priority": 0, "fit": 1.0, "lineColor": "#111414"};
+  o.onStatus=function(s){if(s.status==='ready')ld.style.display='none';else if(s.status==='error'||s.status==='nogl')ld.textContent='3D preview unavailable';};
+  var v=window.JK3D.mount(cv,o);
+  document.getElementById('zin').onclick=function(){v.zoomBy(1.25);};
+  document.getElementById('zout').onclick=function(){v.zoomBy(0.8);};
+  document.getElementById('zre').onclick=function(){v.reset();};
+})();
+</script>
+</body>
+</html>
